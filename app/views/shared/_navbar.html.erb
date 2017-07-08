@@ -8,17 +8,17 @@
         <span class="icon-bar"></span>
       </button>
 
-<!-- LOGO!!! -->
       <div class="logo">
        <%= link_to root_path do %>
         <img  src="http://res.cloudinary.com/dmj1w2it5/image/upload/v1499498591/IMG_1866_kbtqjg.png" class="logo"/>
        <% end%>
      </div>
-    </div>
-
+   </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-
+        <li><%= link_to "Songs", songs_path %></li>
+        <li><%= link_to "Artists", artists_path %></li>
       </ul>
     </div>
+  </div>
 </nav>

@@ -15,7 +15,7 @@ def create
   @song = Song.new(song_params)
 
   if @song.save
-    redirect_to @song
+    redirect_to @song, notice: "Song added"
   else
     render "new"
   end
@@ -26,10 +26,15 @@ def edit
 end
 
 def update
+
+# KEEP GETTING ERROR
+#   ActiveRecord::AssociationTypeMismatch in SongsController#update
+# Artist(#70183690907040) expected, got "#<Artist:0x007fa9cfb78010>" which is an instance of String(#70183645782100)
+#
   @song = Song.find(params[:id])
 
   if @song.update_attributes(song_params)
-    redirect_to @song
+    redirect_to @song, notice: "Song updated"
   else
     render "edit"
   end
