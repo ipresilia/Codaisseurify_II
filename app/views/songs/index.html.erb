@@ -1,0 +1,9 @@
+<h1>Songs</h1>
+
+<% @songs.each do |song| %>
+  <p><%= link_to song.title, song_path(song.id) %></p>
+<% end %>
+
+<button class="btn btn-danger">
+  <%= link_to "Add new Song", new_song_path %>
+</button>
