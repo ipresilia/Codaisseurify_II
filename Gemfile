@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -62,3 +64,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # jQuery - JavaScript
 gem 'jquery-rails', '~> 4.3.1'
+
+
+gem 'rails_12factor', group: :production
